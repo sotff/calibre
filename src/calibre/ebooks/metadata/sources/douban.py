@@ -84,6 +84,8 @@ class Douban(Source):
         title = entry_.get('title')
         description = entry_.get('summary')
         # subtitle = entry_.get('subtitle')  # TODO: std metada doesn't have this field
+        subtitle = entry_.get('subtitle')  # combine title and subtitle
+        title = title + ' ' + subtitle
         publisher = entry_.get('publisher')
         isbn = entry_.get('isbn13')  # ISBN11 is obsolute, use ISBN13
         pubdate = entry_.get('pubdate')
